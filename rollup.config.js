@@ -65,7 +65,7 @@ export default {
     }),
     strip({
       debugger: true,
-      functions: ['config.trace', 'console.log', 'assert.*', 'debug', 'alert'],
+      functions: ['config.trace', 'console.log'],
       sourceMap: true
     }),
     //url({}),
