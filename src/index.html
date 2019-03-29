@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>library</title>
+    <link rel="shortcut icon" href="" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: sans-serif;
+        display: grid;
+        place-items: center;
+        margin: 0;
+        min-height: 100vh;
+        
+      }
+      .app{
+         position: relative; 
+        }
+      .btn {
+        font-size: 30px;
+        padding: 20px 30px;
+        text-transform: uppercase;
+        border: 1px solid;
+        background: transparent;
+        cursor: pointer;
+        border-radius: 4px;
+        display: block;
+        margin: 10px 0;
+      }
+      .btn + .btn {
+        
+      }
+      .area {
+        background: pink;
+        min-height: 40px;
+        position: relative;
+      }
+      .bar-area {
+        min-height: inherit;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateX(0);
+        will-change: transform;
+        //margin-left: -2px;
+      }
+      .bar {
+        position: absolute;
+        top: 0;
+        left: -2px;
+        width: 4px;
+        min-height: inherit;
+        background: darkblue;
+      }
+      .pre {
+        display: block;
+        position: absolute;
+        bottom: 100%;
+        left: 0px;
+        background: #eee;
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="app">
+      <button id="toggle" class="btn">toggle</button>
+      <button id="cancel" class="btn">cancel</button>
+      <div class="area">
+        <div class="bar-area" id="bar-area">
+          <div class="bar" ></div>
+        </div>
+      </div>
+      <div id="result">0</div>
+      <pre id="pre" class="pre"></pre>  
+    </div>
+    
+  </body>
+</html>
