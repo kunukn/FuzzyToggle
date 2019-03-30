@@ -36,7 +36,7 @@ let initiateStateAndConfig = (params = {}) => {
     motion: config.value === 1 ? EXPANDED : COLLAPSED,
     cancelled: false,
     isRunning: false,
-    startTime: getNow()
+    startTime: 0
   };
   return [config, state];
 };
@@ -47,10 +47,11 @@ function createToggle(params) {
   let getConfig = () => {
     config.trace('getConfig');
 
-    let {duration, value} = config;
+    let { duration, value } = config;
 
     return {
-      duration, value
+      duration,
+      value
     };
   };
 
