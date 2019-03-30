@@ -192,7 +192,7 @@ function createToggle(params) {
     return true;
   };
 
-  return { toggle, cancel, getConfig, setConfig };
+  return { toggle, cancel };
 }
 
 export default createToggle;
