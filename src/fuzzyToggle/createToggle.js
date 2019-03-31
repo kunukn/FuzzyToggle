@@ -71,40 +71,25 @@ function createToggle(params) {
   let onDone = () => {
     config.trace('onDone');
 
-    if (config.onDone) {
-      let { value, motion, hasReversed } = state;
-      config.onDone({ value, motion, hasReversed });
-    }
+    config.onDone && config.onDone({ value: state.value, motion: state.motion, hasReversed: state.hasReversed });
   };
 
   let onUpdate = () => {
     config.trace('onUpdate');
 
-    if (config.onUpdate) {
-      let { value, motion, hasReversed } = state;
-
-      config.onUpdate({ value, motion, hasReversed });
-    }
+    config.onUpdate && config.onUpdate({ value: state.value, motion: state.motion });
   };
 
   let onCancel = () => {
     config.trace('onCancel');
 
-    if (config.onCancel) {
-      let { value, motion, hasReversed } = state;
-
-      config.onCancel({ value, motion, hasReversed });
-    }
+    config.onCancel && config.onCancel({ value: state.value, motion: state.motion, hasReversed: state.hasReversed });
   };
 
   let onReverse = () => {
     config.trace('onReverse');
 
-    if (config.onReverse) {
-      let { value, motion } = state;
-
-      config.onReverse({ value, motion });
-    }
+    config.onReverse && config.onReverse({ value: state.value, motion: state.motion });
   };
 
   let getUpdate = () => {
@@ -131,11 +116,12 @@ function createToggle(params) {
     state.elapsedTime = elapsedTime;
 
     if (elapsedTime >= config.duration) {
-      if (prevValue !== value) onUpdate();
-
       state.motion = isCollapsedOrCollapsing(state.motion) ? COLLAPSED : EXPANDED;
       state.isRunning = false;
       state.cAF = null;
+
+      if (prevValue !== value) onUpdate();
+
       onDone();
     } else {
       onUpdate();
