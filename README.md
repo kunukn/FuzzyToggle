@@ -6,8 +6,8 @@ A toggle with fuzzy state between value `[0; 1]` from given duration.
 
 ## Demo
 
-* <a target="_blank" href="https://codepen.io/kunukn/pen/9e3a7609e3c2185d463c35c0837ab69c">Codepen - show concept</a>
-* <a target="_blank" href="https://codepen.io/kunukn/pen/b0fb4e0076f2fe6ed35998de1226b320">Codepen - checkbox</a>
+* <a target="_blank" href="https://codepen.io/kunukn/full/9e3a7609e3c2185d463c35c0837ab69c">Codepen - show concept</a>
+* <a target="_blank" href="https://codepen.io/kunukn/full/b0fb4e0076f2fe6ed35998de1226b320">Codepen - checkbox</a>
 * <a target="_blank" href="https://codesandbox.io/s/4wr00vqw9x">Codesandbox - Checkbox</a>
 
 
