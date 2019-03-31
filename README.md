@@ -50,12 +50,9 @@ setTimeout(()=>{
 * onUpdate
 * onDone
 * onCancel
-* onReverse
+* onToggle
 
 ## Size
 
 ES5 `FuzzyToggle.umd.js`<br>
-UMD minified 2.93 kb (gzipped 1.26 kb)
-
-ES2015 `FuzzyToggle.umd.es2015.js`<br>
-UMD minified 2.31 kb (gzipped 1.01 kb)
+UMD minified 2.93 kb (gzipped 1.25 kb)

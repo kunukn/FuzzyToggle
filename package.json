@@ -1,6 +1,6 @@
 {
   "name": "@kunukn/fuzzytoggle",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Fuzzy toggle",
   "main": "dist/FuzzyToggle.umd.js",
   "main-es2015": "dist/FuzzyToggle.umd.es2015.js",
