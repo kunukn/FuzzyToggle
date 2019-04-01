@@ -20,39 +20,44 @@ A toggle with fuzzy state between value `[0; 1]` from given duration.
 ```js
 import createToggle from '@kunukn/fuzzytoggle';
 
-let log = console.log;
-let onUpdate = ({value:v, motion:m, hasReversed:h}) => { log(v,m,h) };
-let onUpdate = ({value:v, motion:m, hasReversed:h}) => { log(v,m,h) };
+function log(){ console.log(...arguments) };
+let onUpdate = ({value:v, motion:m}) => { log('upd:',v,m) };
+let onDone = ({value:v, motion:m, hasReversed:h}) => { log('done:',v,m,h) };
 
 let fuzzy = createToggle({
     duration: 1000,
-    value: 0,
+    value: 0, // 0 or 1
     onUpdate,
     onDone,
 });
 
 fuzzy.toggle();
-// example: 
-// console.log -> 0.2, 'expanding', false
+// example:
+// console.log -> upd: 0.2 'expanding'
 
 setTimeout(()=>{
     fuzzy.toggle();
-// example: 
-// console.log -> 0.5, 'collapsing', true
+// example:
+// console.log -> upd: 0.5 'collapsing'
 }, 600);
+
+
+// console.log -> done: 0 'collapsed' true
 ```
+
+
 
 ## Methods
 
-* toggle
-* cancel
+* `toggle` reverses the toggle direction until value 0 or 1
+* `cancel` cancels and stops current toggle direction
 
 ## Event hooks
 
-* onUpdate
-* onDone
-* onCancel
-* onToggle
+* onUpdate: `({value, motion}) => { /* your code */ }`
+* onDone: `({value, motion, hasReversed}) => { /* your code */ }`
+* onCancel: `({value, motion, hasReversed}) => { /* your code */ }`
+* onToggle: `({value, motion, hasReversed}) => { /* your code */ }`
 
 ## Size
 
