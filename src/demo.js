@@ -38,8 +38,6 @@ export default function demo(Library) {
     duration: 1000
   });
 
-  console.log(fuzzy.getConfig());
-
   toggleButton.addEventListener('click', e => {
     fuzzy.toggle();
   });
