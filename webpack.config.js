@@ -104,7 +104,7 @@ module.exports = (env = {}, argv = {}) => {
       //modules: [path.resolve(__dirname), 'node_modules'],
       extensions: ['.js'],
       alias: {
-        root: __dirname,
+        '~': __dirname,
         src: path.resolve(__dirname, 'src'),
         dist: path.resolve(__dirname, 'dist'),
       },

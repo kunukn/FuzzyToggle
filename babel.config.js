@@ -19,7 +19,7 @@ module.exports = {
         extensions: ['.js'],
         root: ['./src'],
         alias: {
-          root: '.',
+          '~': '.',
           src: './src',
         },
       },
